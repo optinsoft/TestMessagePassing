@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Message Passing Example",
+    "version": "1.0",
+    "description": "An example extension to demonstrate message passing from a web page.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }

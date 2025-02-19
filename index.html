@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Message Passing Example</title>
+</head>
+<body>
+  <button id="sendMessage">Send Message to Extension</button>
+
+  <script>
+    document.getElementById("sendMessage").addEventListener("click", () => {
+      window.postMessage(
+        { type: "FROM_PAGE", text: "Hello from the web page!" },
+        "*"
+      );
+    });
+  </script>
+</body>
+</html>
