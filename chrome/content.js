@@ -3,7 +3,7 @@ window.addEventListener("message", (event) => {
   
     if (event.data && event.data.type === "FROM_PAGE") {    
         console.log("Received message from web page: ", event.data);
-        chrome.runtime.sendMessage(event.data).then((response) => {
+        chrome.runtime.sendMessage(event.data, (response) => {
             console.log("Received response from background script:", response);
         });
     }
